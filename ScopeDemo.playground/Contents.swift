@@ -60,4 +60,13 @@ print(myself)
 
 
 
-//
+//What can be a good Solution! ??? Returning Values from Functions
+
+func myFunc () -> Int
+{
+    let value = 100
+    return value
+}
+
+var retVal = myFunc()
+print(retVal)
