@@ -1,5 +1,3 @@
-//github.com/nayyarahmed/ScopeDemoCodes
-
 import UIKit
 var str = "T3- Demo Code for Scope Description in Variables!"
 print(str)
@@ -8,21 +6,31 @@ print("Let's Get Started!")
 
 //Global Variable Example : Accessible within the entire Program
 var globalVariable = true
-if globalVariable {
-    let localVariable = 7
-    print(localVariable)
-}
+    if globalVariable
+    {
+        let localVariable = 7
+        print(localVariable)
+    }
+
+
 
 //Global Variable Example : Accessible in the entire Program
 var count : Int = 20
-print("Value of count is: \(count)")
+    print("Value of count is: \(count)")
+
+
+
+
 
 
 //index variable is local to FOR Loop and thus not accessible outside!
-for myVar in 1...3{
-    print(myVar)
+for myVar in 1...3
+    {
+        print(myVar)
     }
 // print(myVar) // Errorenous Statement (Since myVar is outside scope)
+
+
 
 
 //Variable Shadowing Example: The shadow variable retrieves back old value once the instance is reached.
@@ -31,11 +39,11 @@ for name in name{
     print(name)
 }
 print(name)
-//Not a good practice, Confusing?? Annoying? But some developers use this as well.
+//Not a good practice, Confusing?? Annoying? But some developers use this as still!.
+//ITS A MATTER OF CHOICE!!
 
 
-//Local Variable Example: Accessible within the Scope of Function!
-
+//Local Variable and Constant Example: Accessible within the Scope of Function!
 let gitID = "nayyarahmed"
 func fun (name: String, age: Int)
 {
@@ -54,16 +62,15 @@ print(gitID)
 struct Person{
     var name: String
     var age: Int
-    
 //Self shadowing is the best way to shadow a variable and values.
-    init(name: String, age:Int){
+    init(name: String, age:Int)
+    {
         self.age = age
         self.name = name
     }
 }
 //Declaring an object of the Structure
 let myself = Person(name: "Nayyar", age: 35)
-
 //Printing the self shadowed variable values in the object
 print(myself)
 
@@ -77,6 +84,10 @@ func myFunc () -> Int
 }
 var retVal = myFunc()
 print(retVal)
+
+
+
+
 
 
 // EXAMPLES FROM KEYNOTES :
@@ -125,8 +136,14 @@ func exclaim(name: String?) {
     print("Exclaim function was passed: \(name)")
   }
 }
+exclaim(name: "Nayyar!")
 
 func newExclaim(name: String?) {
-  guard let name = name else { return }
+  guard let name = name
+  else
+  {
+    return
+  }
   print("Exclaim function was passed: \(name)")
 }
+newExclaim(name: "Khan")
