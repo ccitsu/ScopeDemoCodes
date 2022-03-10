@@ -11,7 +11,7 @@ var globalVariable = true
         let localVariable = 7
         print(localVariable)
     }
-
+//print(localVariable)
 
 
 //Global Variable Example : Accessible in the entire Program
@@ -28,7 +28,7 @@ for myVar in 1...3
     {
         print(myVar)
     }
-// print(myVar) // Errorenous Statement (Since myVar is outside scope)
+//print(myVar) // Errorenous Statement (Since myVar is outside scope)
 
 
 
@@ -63,18 +63,21 @@ struct Person{
     var name: String
     var age: Int
 //Self shadowing is the best way to shadow a variable and values.
-    init(name: String, age:Int)
-    {
-        self.age = age
-        self.name = name
-    }
+//    init(name: String, age:Int)
+//    {
+//        self.age = age
+//        self.name = name
+//    }
 }
 //Declaring an object of the Structure
 let myself = Person(name: "Nayyar", age: 35)
+let yourself  = Person(name: "T3", age: 4)
 //Printing the self shadowed variable values in the object
 print(myself)
+print(yourself)
 
-
+var x = myself.age
+print(x)
 
 //What can be a good Solution! ??? Returning Values from Functions
 func myFunc () -> Int
