@@ -1,6 +1,10 @@
+//github.com/nayyarahmed/ScopeDemoCodes
+
 import UIKit
 var str = "T3- Demo Code for Scope Description in Variables!"
 print(str)
+print("Let's Get Started!")
+
 
 //Global Variable Example : Accessible within the entire Program
 var globalVariable = true
@@ -9,7 +13,7 @@ if globalVariable {
     print(localVariable)
 }
 
-//Global Variable Example : Accessible within the entire Program
+//Global Variable Example : Accessible in the entire Program
 var count : Int = 20
 print("Value of count is: \(count)")
 
@@ -31,14 +35,19 @@ print(name)
 
 
 //Local Variable Example: Accessible within the Scope of Function!
+
+let gitID = "nayyarahmed"
 func fun (name: String, age: Int)
 {
+    let email = "nayyar@su.edu.sa"
     print("Hello \(name), your age is : \(age)")
+    print("My Email : \(email)")
 }
 
 fun(name: "Nayyar", age: 35) // Function Call envokes local variable
-
-
+//print(email)
+print(gitID)
+//ERROR CODE
 
 
 //Variable Shadowing in Structures!
@@ -61,40 +70,31 @@ print(myself)
 
 
 //What can be a good Solution! ??? Returning Values from Functions
-
 func myFunc () -> Int
 {
     let value = 100
     return value
 }
-
 var retVal = myFunc()
 print(retVal)
 
 
-
 // EXAMPLES FROM KEYNOTES :
-
 var age = 55
-
 func printMyAge() {
   print("My age: \(age)")
 }
-
 print(age)
 printMyAge()
-
 
 
 func printBottleCount() {
     let bottleCount = 99
     print(bottleCount)
 }
-
 printBottleCount()
 //print(bottleCount)
 //Errorenous Code!
-
 
 func printTenNames() {
   let name = "Richard"
@@ -104,12 +104,10 @@ func printTenNames() {
   print(index)
   print(name)
 }
-
 printTenNames()
 
 
 let points = 100
-
 for index in 1...3 {
   let points = 200
   print("Loop \(index): \(points+index)")
@@ -117,9 +115,7 @@ for index in 1...3 {
 print(points)
 
 
-
 var newName: String? = "Robert"
-
 if let newName = newName {
  print("My name is \(newName)")
 }
@@ -134,6 +130,3 @@ func newExclaim(name: String?) {
   guard let name = name else { return }
   print("Exclaim function was passed: \(name)")
 }
-
-
-
